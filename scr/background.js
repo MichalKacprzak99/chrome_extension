@@ -1,12 +1,12 @@
 var query = { highlighted: true, currentWindow: true };
+
 function callback(tabs) {
     var text = ""
     for( const tab of tabs){
         text += tab.url +"\n"
     }
-    document.getElementById('info').textContent = text;
     var target = document.getElementById('info');
-
+    target.innerText = text;
     var range, select;
     if (document.createRange) {
         range = document.createRange();
@@ -22,8 +22,8 @@ function callback(tabs) {
         range.select();
         document.execCommand('copy');
     }
-
   }
-chrome.commands.onCommand.addListener(function(command) {
+
+chrome.commands.onCommand.addListener(() => {
     chrome.tabs.query(query, callback);
   });

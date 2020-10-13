@@ -15,12 +15,12 @@
       },
       "description": "Opens popup.html"
     },
-    "toggle-feature-foo": {
+    "copy_url": {
       "suggested_key": {
         "default": "Ctrl+Shift+A",
         "mac": "Command+Shift+Y"
       },
-      "description": "Toggle feature foo"
+      "description": "Copy url of highlighted tabs"
     }
   },
   "permissions": [
