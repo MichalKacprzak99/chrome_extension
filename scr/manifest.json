@@ -14,10 +14,21 @@
         "mac": "MacCtrl+Shift+F"
       },
       "description": "Opens popup.html"
+    },
+    "toggle-feature-foo": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+A",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "Toggle feature foo"
     }
   },
   "permissions": [
     "tabs",
     "clipboardWrite"
-  ]
+  ],
+  "background": {
+    "persistent": false,
+    "page": "background.html"
+  }
 }
