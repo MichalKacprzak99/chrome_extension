@@ -24,6 +24,10 @@ function callback(tabs) {
     }
   }
 
-chrome.commands.onCommand.addListener(() => {
-    chrome.tabs.query(query, callback);
+chrome.commands.onCommand.addListener((command) => {
+    
+    if(command == "copy_url"){
+        chrome.tabs.query(query, callback);
+    }
+    
   });
