@@ -1,13 +1,11 @@
-var query = { highlighted: true, currentWindow: true };
 
-function callback(tabs) {
-    var text = ""
-    for( const tab of tabs){
-        text += tab.url +"\n"
-    }
-    var target = document.getElementById('info');
+
+
+const copyToClipBoard = (text) => {
+
+    const target = document.getElementById('info');
     target.innerText = text;
-    var range, select;
+    const range, select;
     if (document.createRange) {
         range = document.createRange();
         range.selectNode(target)
@@ -22,12 +20,20 @@ function callback(tabs) {
         range.select();
         document.execCommand('copy');
     }
+}
+
+const copyUrlOfSelectedTabs = (tabs) => {
+    let text = ""
+    for( const tab of tabs){
+        text += tab.url +"\n"
+    }
+    copyToClipBoard(text)
   }
 
 chrome.commands.onCommand.addListener((command) => {
-    
+    const query = { highlighted: true, currentWindow: true };
     if(command == "copy_url"){
-        chrome.tabs.query(query, callback);
+        chrome.tabs.query(query, copySelectedTabsUrl);
     }
     
   });
