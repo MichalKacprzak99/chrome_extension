@@ -2,7 +2,7 @@ const copyToClipBoard = (text) => {
 
     const target = document.getElementById('info');
     target.innerText = text;
-    const range, select;
+    let range, select;
     if (document.createRange) {
         range = document.createRange();
         range.selectNode(target)
