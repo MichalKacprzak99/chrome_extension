@@ -17,7 +17,7 @@
     },
     "copy_url": {
       "suggested_key": {
-        "default": "Ctrl+Shift+A",
+        "default": "Ctrl+Shift+S",
         "mac": "Command+Shift+Y"
       },
       "description": "Copy url of selected tabs"
