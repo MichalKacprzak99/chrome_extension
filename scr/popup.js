@@ -1,3 +1,6 @@
-document.getElementById('hotkey').onclick = () => chrome.tabs.create({
+
+const openConfigureCommands = () => {
+  chrome.tabs.create({
     url: 'chrome://extensions/configureCommands'
   });
+}

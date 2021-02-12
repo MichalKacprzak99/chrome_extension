@@ -13,14 +13,14 @@
         "default": "Ctrl+Shift+F",
         "mac": "MacCtrl+Shift+F"
       },
-      "description": "Opens popup.html"
+      "description": "Opens popup window"
     },
     "copy_url": {
       "suggested_key": {
         "default": "Ctrl+Shift+A",
         "mac": "Command+Shift+Y"
       },
-      "description": "Copy url of highlighted tabs"
+      "description": "Copy url of selected tabs"
     }
   },
   "permissions": [
