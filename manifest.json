@@ -4,8 +4,8 @@
   "version": "1.0",
   "manifest_version": 2,
   "browser_action": {
-    "default_popup": "popup.html",
-    "default_icon": "hello_extensions.png"
+    "default_popup": "url_copier/popup/popup.html",
+    "default_icon": "url_copier/resources/hello_extensions.png"
   },
   "commands": {
     "_execute_browser_action": {
@@ -29,6 +29,6 @@
   ],
   "background": {
     "persistent": false,
-    "page": "background.html"
+    "page": "url_copier/background/background.html"
   }
 }

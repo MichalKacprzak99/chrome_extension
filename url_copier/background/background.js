@@ -1,4 +1,4 @@
-const copyToClipBoard = (text) => {
+function copyToClipBoard(text){
 
     const target = document.getElementById('info');
     target.innerText = text;
@@ -19,18 +19,21 @@ const copyToClipBoard = (text) => {
     }
 }
 
-const copyUrlOfSelectedTabs = (tabs) => {
+function copyUrlOfSelectedTabs(tabs){
+    console.log("ala")
     let text = ""
     for( const tab of tabs){
         text += tab.url +"\n"
     }
     copyToClipBoard(text)
-  }
+}
 
 chrome.commands.onCommand.addListener((command) => {
     const query = { highlighted: true, currentWindow: true };
     if(command == "copy_url"){
-        chrome.tabs.query(query, copySelectedTabsUrl);
+        chrome.tabs.query(query, copyUrlOfSelectedTabs);
     }
     
-  });
+});
+
+
